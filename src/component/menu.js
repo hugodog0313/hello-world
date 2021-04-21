@@ -34,9 +34,18 @@ function Menu(props) {
 
     return (
         <div>
-            <h1 onClick={chapter1}>chapter1</h1>
-            <h1 onClick={chapter2}>chapter2</h1>
-            <h1 onClick={chapter3}>chapter3</h1>
+            <Link to="/chapter1">
+                {/* <h1 onClick={chapter1}>chapter1</h1> */}
+                <h1>chapter1</h1>
+            </Link>
+            <Link to="/chapter2">
+                {/* <h1 onClick={chapter2}>chapter2</h1> */}
+                <h1>chapter2</h1>
+            </Link>
+            <Link to="/chapter3">
+                {/* <h1 onClick={chapter3}>chapter3</h1> */}
+                <h1>chapter3</h1>
+            </Link>
         </div>
     );
 }

@@ -27,13 +27,24 @@ function App() {
           <RedSwitch />
         </nav>
         <div class="container">
-          <div id="root">
-            {/* <Link></Link> */}
-            {click == 0 && <Context />}
-            {click == 1 && <Context />}
-            {click == 2 && <ContextTwo />}
-            {click == 3 && <ContextThree />}
-          </div>
+          <Switch>
+            <div id="root">
+              {/* <Link></Link> */}
+              {/* {click == 0 && <Context />}
+              {click == 1 && <Context />}
+              {click == 2 && <ContextTwo />}
+              {click == 3 && <ContextThree />} */}
+              <Route path="/chapter1">
+                <Context />
+              </Route>
+              <Route path="/chapter2">
+                <ContextTwo />
+              </Route>
+              <Route path="/chapter3">
+                <ContextThree />
+              </Route>
+            </div>
+          </Switch>
           <div id="foot">
             <Menu aaa={callback} />
           </div>
