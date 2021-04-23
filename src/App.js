@@ -5,6 +5,8 @@ import Menu from './component/menu.js';
 import Context from './component/context.js';
 import ContextTwo from './component/contextTwo.js';
 import ContextThree from './component/contextThree.js';
+import FloatingButton from './component/sizeButtom.js';
+import Title from './component/title.js'
 import {
   BrowserRouter as Router, Switch, Route, Link
 } from "react-router-dom";
@@ -22,11 +24,15 @@ function App() {
   return (
     <Router>
       <div>
+        <Title />
+        <div>
+          <FloatingButton />
+        </div>
         <nav id="nav">
           <BlueSwitch />
           <RedSwitch />
         </nav>
-        <div class="container">
+        <div className="container">
           <Switch>
             <div id="root">
               {/* <Link></Link> */}
@@ -54,5 +60,27 @@ function App() {
   );
 }
 
+// function todoApp(state = initialState, action) {
+//   switch (action.type) {
+//     case SET_VISIBILITY_FILTER:
+//       return Object.assign({}, state, {
+//         visibilityFilter: action.filter
+//       })
+//     default:
+//       return state
+//   }
+// }
+
+// const TodoList = ({ todos, onTodoClick }) => (
+//   <ul>
+//     {todos.map(todo =>
+//       <Todo
+//         key={todo.id}
+//         {...todo}
+//         onClick={() => onTodoClick(todo.id)}
+//       />
+//     )}
+//   </ul>
+// )
 export default App;
 

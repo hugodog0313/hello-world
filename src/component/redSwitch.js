@@ -4,9 +4,9 @@ function RedSwitch() {
     const [isSwitchOn, setIsSwitchOn] = useState({ isSwitchOn: true });
 
 
-    useEffect(() => {
-        console.log("useEffect");
-    });
+    // useEffect(() => {
+    //     console.log("useEffect");
+    // });
     return (
         <div>
             <Button id="rootButton" onClick={() => {
